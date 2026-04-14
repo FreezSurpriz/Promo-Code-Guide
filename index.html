@@ -352,6 +352,14 @@
             box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
         }
 
+        #html-content-type-area a.follow-item {
+            text-decoration: none;
+        }
+
+        #html-content-type-area a.follow-item:hover {
+            cursor: pointer;
+        }
+
         #html-content-type-area .follow-item.telegram {
             background:
                 radial-gradient(circle at left bottom, rgba(91, 14, 17, 0.28) 0%, rgba(91, 14, 17, 0.12) 12%, rgba(23, 23, 22, 0) 30%),
@@ -755,11 +763,11 @@
                     <article class="card card-gift">
                         <h3 class="card-title">
                             <img class="promo-icon" src="./img/p_c_ticket_section_info.png" alt="">
-                            <span>Promokod nasıl kullanılır?</span>
+                            <span>How to activate a promo code?</span>
                         </h3>
                         <p>
-                            Promokodunu “Promokod” alanına gir ve anında bonusunu al. Adım adım kullanım için Telegram
-                            rehberimizi incele.
+                            Enter your promo code in the “Promo Code” section and activate it to receive your bonus
+                            instantly. Follow our Telegram guide for step-by-step instructions.
                         </p>
                         <img class="info-icon info-gift" src="./img/Present Gold_section_info.png" alt="">
                     </article>
@@ -792,15 +800,15 @@
                 <h2 class="follow-title">Follow Us And Never Miss A Code</h2>
 
                 <div class="follow-list">
-                    <div class="follow-item telegram">
+                    <a class="follow-item telegram" href="#" aria-label="Open Telegram channel">
                         <span>From smaller FS packages with lower deposits</span>
                         <img class="follow-item-img telegram" src="./img/telegram_img_card_present&section_cta.png"
                             alt="">
-                    </div>
-                    <div class="follow-item video">
+                    </a>
+                    <a class="follow-item video" href="#" aria-label="Open YouTube channel">
                         <span>Up to larger FS packages with higher deposits</span>
                         <img class="follow-item-img youtube" src="./img/youtube_section_cta.png" alt="">
-                    </div>
+                    </a>
                 </div>
 
                 <a class="btn" href="#">Join Now</a>
