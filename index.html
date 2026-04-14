@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Code Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        h1 {
+            opacity: 0;
+        }
+
+        .my-section {
+            position: relative;
+        }
+
+        .my-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: url("https://luks.best/content/uploads/bg_lg_788ede48cb.png") top center / contain no-repeat;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .my-section>* {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        body {
+            margin: 0;
+            background: #1F1F1F;
+        }
+
+        #html-content-type-area {
+            color: #f5efe3;
+            font-family: 'Poppins', sans-serif;
+            background: #1F1F1F;
+            overflow: hidden;
+        }
+
+        #html-content-type-area * {
+            box-sizing: border-box;
+        }
+
+        #html-content-type-area .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 14px 16px 28px;
+        }
+
+        #html-content-type-area .hero img {
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        #html-content-type-area .section {
+            position: relative;
+            margin-top: 34px;
+            border-radius: 10px;
+            background: #171716;
+        }
+
+        #html-content-type-area .section-title {
+            margin: 0 0 8px;
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 100%;
+            text-align: center;
+        }
+
+        #html-content-type-area .intro .section-title {
+            margin: 0;
+            background: linear-gradient(90deg, #FFEDA0 0%, #EDD777 55%, #CDA114 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #html-content-type-area .section-text {
+            margin: 0;
+            color: #ded7cc;
+            width: 400;
+            font-size: 18px;
+            line-height: 1.45;
+            text-align: center;
+        }
+
+        #html-content-type-area .section-text .highlight {
+            font-weight: 400;
+            background: linear-gradient(90deg, #E19800 0%, #FFF86B 34%, #F7D14E 68%, #D4A041 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #html-content-type-area .intro {
+            padding: 18px 150px 18px 28px;
+            overflow: hidden;
+        }
+
+        #html-content-type-area .intro-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #html-content-type-area .intro::before {
+            content: "";
+            position: absolute;
+            top: -210px;
+            left: 50%;
+            transform: translateX(-65%);
+            width: 460px;
+            height: 175px;
+            background: radial-gradient(ellipse at center,
+                    #E19800 0%,
+                    #FFF86B 24%,
+                    #F7D14E 46%,
+                    #D4A041 62%,
+                    rgba(212, 160, 65, 0) 100%);
+            filter: blur(60px);
+            opacity: 0.42;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        #html-content-type-area .section-decor {
+            position: absolute;
+            display: block;
+            pointer-events: none;
+        }
+
+        #html-content-type-area .intro-ticket {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            height: 100%;
+            width: auto;
+        }
+
+        #html-content-type-area .info-icon {
+            position: absolute;
+            z-index: 1;
+            display: block;
+            pointer-events: none;
+        }
+
+        #html-content-type-area .info-percent {
+            right: 0;
+            bottom: 0;
+            width: 65px;
+        }
+
+        #html-content-type-area .info-gift {
+            right: 0px;
+            bottom: 0px;
+            width: 85px;
+        }
+
+        #html-content-type-area .promo-icon {
+            z-index: 1;
+            width: 30px;
+            height: 20px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        #html-content-type-area .info-grid {
+            padding: 32px;
+            background:
+                radial-gradient(circle at 0% 100%, rgba(140, 22, 28, 0.36) 0%, rgba(140, 22, 28, 0) 8%),
+                radial-gradient(circle at 100% 0%, rgba(140, 22, 28, 0.34) 0%, rgba(140, 22, 28, 0) 8%),
+                #171716;
+        }
+
+        #html-content-type-area .cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        #html-content-type-area .card {
+            position: relative;
+            min-height: 112px;
+            padding: 18px 60px 16px 16px;
+            border-radius: 8px;
+            background: #1b1a19;
+            box-shadow: inset 0 0 0 0.1px rgba(255, 255, 255, 0.63);
+        }
+
+        #html-content-type-area .card-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 14px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        #html-content-type-area .info-grid .card-title span {
+            background: linear-gradient(90deg, #FFEDA0 0%, #EDD777 55%, #CDA114 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #html-content-type-area .card p {
+            margin: 0;
+            color: #ddd6cb;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.45;
+        }
+
+        #html-content-type-area .cta {
+            padding: 16px 96px;
+            text-align: center;
+        }
+
+        #html-content-type-area .cta-left,
+        #html-content-type-area .cta-right,
+        #html-content-type-area .cta-line-left,
+        #html-content-type-area .cta-line-right {
+            position: absolute;
+            display: block;
+            pointer-events: none;
+        }
+
+        #html-content-type-area .cta-line-left {
+            top: 0px;
+            left: 0;
+            width: 260px;
+            opacity: 0.85;
+            z-index: 0;
+        }
+
+        #html-content-type-area .cta-line-right {
+            top: 0px;
+            right: 0px;
+            width: 270px;
+            opacity: 0.85;
+            z-index: 0;
+        }
+
+        #html-content-type-area .cta-left {
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 1;
+        }
+
+        #html-content-type-area .cta-right {
+            right: 16px;
+            top: 12px;
+            width: 105px;
+            z-index: 1;
+        }
+
+        #html-content-type-area .cta-title,
+        #html-content-type-area .follow-title {
+            margin: 0 0 14px;
+            color: #f6f2ec;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.2;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        #html-content-type-area .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 112px;
+            min-height: 34px;
+            padding: 8px 20px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            background:
+                linear-gradient(135deg, #E19800 0%, #FFF86B 38%, #F7D14E 68%, #D4A041 100%) padding-box,
+                linear-gradient(135deg, #FFEDA0 0%, #EDD777 50%, #CDA114 100%) border-box;
+            color: #2e2610;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+            text-decoration: none;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+            position: relative;
+            z-index: 2;
+        }
+
+        #html-content-type-area .follow {
+            margin-top: 34px;
+            text-align: center;
+        }
+
+        #html-content-type-area .follow-title {
+            margin-bottom: 14px;
+        }
+
+        #html-content-type-area .follow-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        #html-content-type-area .follow-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 90px;
+            padding: 12px 78px 12px 18px;
+            border-radius: 8px;
+            background: #171716;
+            overflow: hidden;
+            color: #d8d1c7;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.35;
+            text-align: left;
+        }
+
+        #html-content-type-area .follow-item::before {
+            content: "\2713";
+            margin-right: 10px;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        #html-content-type-area .follow-item-img {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: auto;
+            height: auto;
+            max-height: 74px;
+            object-fit: contain;
+            display: block;
+            pointer-events: none;
+        }
+
+        #html-content-type-area .follow-item.telegram .follow-item-img.telegram {
+            top: 48%;
+            right: 10px;
+            max-height: 68px;
+        }
+
+        #html-content-type-area .follow-item.video .follow-item-img.youtube {
+            top: 50%;
+            right: 10px;
+            max-height: 62px;
+        }
+
+        @media (max-width: 640px) {
+            #html-content-type-area .page {
+                padding: 12px 12px 24px;
+            }
+
+            #html-content-type-area .intro,
+            #html-content-type-area .cta {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            #html-content-type-area .intro {
+                padding-right: 104px;
+            }
+
+            #html-content-type-area .intro-ticket {
+                right: 0;
+            }
+
+            #html-content-type-area .cards,
+            #html-content-type-area .follow-list {
+                grid-template-columns: 1fr;
+            }
+
+            #html-content-type-area .card {
+                min-height: auto;
+                padding-right: 78px;
+            }
+
+            #html-content-type-area .cta {
+                padding-top: 18px;
+                padding-bottom: 18px;
+            }
+
+            #html-content-type-area .cta-left {
+                width: 110px;
+            }
+
+            #html-content-type-area .cta-line-left {
+                left: -6px;
+                top: -2px;
+                width: 170px;
+            }
+
+            #html-content-type-area .cta-line-right {
+                right: -8px;
+                top: -4px;
+                width: 165px;
+            }
+
+            #html-content-type-area .cta-right {
+                width: 48px;
+                right: 12px;
+            }
+
+            #html-content-type-area .follow-item {
+                padding-right: 72px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="html-content-type-area">
+        <div class="page my-section">
+            <h1>Promo Code Guide</h1>
+
+            <div class="hero">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./img/mobile_EN.png">
+                    <img src="./img/Desktop_EN.png" alt="Promo code banner">
+                </picture>
+            </div>
+
+            <section class="section intro">
+                <img class="section-decor intro-ticket" src="./img/image_section_intro.png" alt="">
+                <div class="intro-content">
+                    <h2 class="section-title">Where to find promo codes?</h2>
+                    <p class="section-text">
+                        Look for promo codes on our social media, website and emails.<br>
+                        You can also check our Telegram guide for the latest active codes.<br>
+                        <span class="highlight">Stay alert - bonuses are limited.</span>
+                    </p>
+                </div>
+            </section>
+
+            <section class="section info-grid">
+                <div class="cards">
+                    <article class="card card-gift">
+                        <h3 class="card-title">
+                            <img class="promo-icon" src="./img/p_c_ticket_section_info.png" alt="">
+                            <span>Promokod nasıl kullanılır?</span>
+                        </h3>
+                        <p>
+                            Promokodunu “Promokod” alanına gir ve anında bonusunu al. Adım adım kullanım için Telegram
+                            rehberimizi incele.
+                        </p>
+                        <img class="info-icon info-gift" src="./img/Present Gold_section_info.png" alt="">
+                    </article>
+
+                    <article class="card card-percent">
+                        <h3 class="card-title">
+                            <img class="promo-icon" src="./img/p_c_ticket_section_info.png" alt="">
+                            <span>What rewards can you get?</span>
+                        </h3>
+                        <p>
+                            Promo codes unlock Free Spins, deposit bonuses, Freebet and other exclusive rewards directly
+                            to your balance.
+                        </p>
+                        <img class="info-icon info-percent" src="./img/%25 symbol_section_info.png" alt="">
+                    </article>
+                </div>
+            </section>
+
+            <section class="section cta">
+                <img class="cta-line-left" src="./img/left_line.png" alt="">
+                <img class="cta-line-right" src="./img/right_line.png" alt="">
+                <img class="cta-left" src="./img/Present red_card_present.png" alt="">
+                <img class="cta-right" src="./img/telegram_img_card_present&section_cta.png" alt="">
+                <h2 class="cta-title">Complete The Quest - Get Your Bonus</h2>
+                <a class="btn" href="#">Join Telegram</a>
+            </section>
+
+            <section class="follow">
+                <h2 class="follow-title">Follow Us And Never Miss A Code</h2>
+
+                <div class="follow-list">
+                    <div class="follow-item telegram">
+                        <span>From smaller FS packages with lower deposits</span>
+                        <img class="follow-item-img telegram" src="./img/telegram_img_card_present&section_cta.png"
+                            alt="">
+                    </div>
+                    <div class="follow-item video">
+                        <span>Up to larger FS packages with higher deposits</span>
+                        <img class="follow-item-img youtube" src="./img/youtube_section_cta.png" alt="">
+                    </div>
+                </div>
+
+                <a class="btn" href="#">Join Now</a>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
