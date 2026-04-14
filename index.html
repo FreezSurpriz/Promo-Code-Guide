@@ -7,9 +7,6 @@
     <title>Promo Code Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -25,10 +22,12 @@
         .my-section::before {
             content: "";
             position: absolute;
-            inset: 0;
+            inset: 180px 0 0;
             z-index: 0;
-            background: url("https://luks.best/content/uploads/bg_lg_788ede48cb.png") top center / contain no-repeat;
-            opacity: 0.7;
+            background:
+                url("./img/stars-bg.png") top center / 100% auto repeat-y,
+                linear-gradient(180deg, rgba(31, 31, 31, 0) 0%, rgba(31, 31, 31, 0.96) 14%, #1F1F1F 100%);
+            opacity: 0.82;
             pointer-events: none;
         }
 
@@ -36,7 +35,6 @@
             position: relative;
             z-index: 1;
         }
-
 
         body {
             margin: 0;
@@ -66,23 +64,26 @@
             border-radius: 10px;
         }
 
-        #html-content-type-area .section {
+        #html-content-type-area .section,
+        #html-content-type-area .follow {
             position: relative;
             margin-top: 34px;
             border-radius: 10px;
             background: #171716;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
         }
 
         #html-content-type-area .section-title {
-            margin: 0 0 8px;
+            margin: 0 0 0px;
             font-size: 26px;
             font-weight: 600;
-            line-height: 100%;
+            line-height: 1.1;
             text-align: center;
+            letter-spacing: 0;
         }
 
-        #html-content-type-area .intro .section-title {
-            margin: 0;
+        #html-content-type-area .intro .section-title,
+        #html-content-type-area .info-grid .card-title span {
             background: linear-gradient(90deg, #FFEDA0 0%, #EDD777 55%, #CDA114 100%);
             -webkit-background-clip: text;
             background-clip: text;
@@ -93,13 +94,14 @@
         #html-content-type-area .section-text {
             margin: 0;
             color: #ded7cc;
-            width: 400;
             font-size: 18px;
             line-height: 1.45;
             text-align: center;
         }
 
         #html-content-type-area .section-text .highlight {
+            display: block;
+            margin-top: 4px;
             font-weight: 400;
             background: linear-gradient(90deg, #E19800 0%, #FFF86B 34%, #F7D14E 68%, #D4A041 100%);
             -webkit-background-clip: text;
@@ -118,7 +120,7 @@
             z-index: 1;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 8px;
         }
 
         #html-content-type-area .intro::before {
@@ -154,40 +156,14 @@
             z-index: 0;
             height: 100%;
             width: auto;
-        }
-
-        #html-content-type-area .info-icon {
-            position: absolute;
-            z-index: 1;
             display: block;
-            pointer-events: none;
-        }
-
-        #html-content-type-area .info-percent {
-            right: 0;
-            bottom: 0;
-            width: 65px;
-        }
-
-        #html-content-type-area .info-gift {
-            right: 0px;
-            bottom: 0px;
-            width: 85px;
-        }
-
-        #html-content-type-area .promo-icon {
-            z-index: 1;
-            width: 30px;
-            height: 20px;
-            border-radius: 4px;
-            object-fit: cover;
         }
 
         #html-content-type-area .info-grid {
             padding: 32px;
             background:
-                radial-gradient(circle at 0% 100%, rgba(140, 22, 28, 0.36) 0%, rgba(140, 22, 28, 0) 8%),
-                radial-gradient(circle at 100% 0%, rgba(140, 22, 28, 0.34) 0%, rgba(140, 22, 28, 0) 8%),
+                radial-gradient(circle at 0% 100%, rgba(91, 14, 17, 0.4) 0%, rgba(91, 14, 17, 0.16) 4%, rgba(23, 23, 22, 0) 10%),
+                radial-gradient(circle at 100% 0%, rgba(91, 14, 17, 0.36) 0%, rgba(91, 14, 17, 0.14) 4%, rgba(23, 23, 22, 0) 10%),
                 #171716;
         }
 
@@ -200,10 +176,12 @@
         #html-content-type-area .card {
             position: relative;
             min-height: 112px;
-            padding: 18px 60px 16px 16px;
+            padding: 38px 60px 38px 16px;
             border-radius: 8px;
-            background: #1b1a19;
-            box-shadow: inset 0 0 0 0.1px rgba(255, 255, 255, 0.63);
+            background: #171716;
+            box-shadow:
+                inset 0 0 0 1px rgba(255, 255, 255, 0.11),
+                0 12px 34px rgba(0, 0, 0, 0.14);
         }
 
         #html-content-type-area .card-title {
@@ -216,12 +194,13 @@
             line-height: 1.3;
         }
 
-        #html-content-type-area .info-grid .card-title span {
-            background: linear-gradient(90deg, #FFEDA0 0%, #EDD777 55%, #CDA114 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            -webkit-text-fill-color: transparent;
+        #html-content-type-area .promo-icon {
+            z-index: 1;
+            width: 30px;
+            height: 20px;
+            border-radius: 4px;
+            object-fit: cover;
+            flex: 0 0 auto;
         }
 
         #html-content-type-area .card p {
@@ -232,22 +211,41 @@
             line-height: 1.45;
         }
 
+        #html-content-type-area .info-icon {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            display: block;
+            pointer-events: none;
+        }
+
+        #html-content-type-area .info-percent {
+            width: 65px;
+        }
+
+        #html-content-type-area .info-gift {
+            width: 85px;
+        }
+
         #html-content-type-area .cta {
             padding: 16px 96px;
             text-align: center;
+            overflow: hidden;
         }
 
         #html-content-type-area .cta-left,
         #html-content-type-area .cta-right,
         #html-content-type-area .cta-line-left,
-        #html-content-type-area .cta-line-right {
+        #html-content-type-area .cta-line-right,
+        #html-content-type-area .cta-line-mobile {
             position: absolute;
             display: block;
             pointer-events: none;
         }
 
         #html-content-type-area .cta-line-left {
-            top: 0px;
+            top: 0;
             left: 0;
             width: 260px;
             opacity: 0.85;
@@ -255,11 +253,15 @@
         }
 
         #html-content-type-area .cta-line-right {
-            top: 0px;
-            right: 0px;
+            top: 0;
+            right: 0;
             width: 270px;
             opacity: 0.85;
             z-index: 0;
+        }
+
+        #html-content-type-area .cta-line-mobile {
+            display: none;
         }
 
         #html-content-type-area .cta-left {
@@ -286,12 +288,18 @@
             text-align: center;
             position: relative;
             z-index: 2;
+            letter-spacing: 0;
+        }
+
+        #html-content-type-area .cta-title {
+            text-align: center;
         }
 
         #html-content-type-area .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            width: auto;
             min-width: 112px;
             min-height: 34px;
             padding: 8px 20px;
@@ -305,13 +313,19 @@
             font-weight: 600;
             line-height: 1;
             text-decoration: none;
-            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.42),
+                0 10px 30px rgba(233, 177, 18, 0.2);
             position: relative;
             z-index: 2;
         }
 
         #html-content-type-area .follow {
+            padding: 0;
             margin-top: 34px;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
             text-align: center;
         }
 
@@ -340,6 +354,13 @@
             font-weight: 400;
             line-height: 1.35;
             text-align: left;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        #html-content-type-area .follow-item.telegram {
+            background:
+                radial-gradient(circle at left bottom, rgba(91, 14, 17, 0.28) 0%, rgba(91, 14, 17, 0.12) 12%, rgba(23, 23, 22, 0) 30%),
+                #171716;
         }
 
         #html-content-type-area .follow-item::before {
@@ -357,81 +378,366 @@
             transform: translateY(-50%);
             width: auto;
             height: auto;
-            max-height: 74px;
             object-fit: contain;
             display: block;
             pointer-events: none;
         }
 
         #html-content-type-area .follow-item.telegram .follow-item-img.telegram {
-            top: 48%;
-            right: 10px;
             max-height: 68px;
         }
 
         #html-content-type-area .follow-item.video .follow-item-img.youtube {
-            top: 50%;
-            right: 10px;
             max-height: 62px;
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
             #html-content-type-area .page {
-                padding: 12px 12px 24px;
+                max-width: 640px;
+                padding: 22px 24px 34px;
             }
 
-            #html-content-type-area .intro,
-            #html-content-type-area .cta {
-                padding-left: 18px;
-                padding-right: 18px;
+            #html-content-type-area .section,
+            #html-content-type-area .follow {
+                margin-top: 54px;
+                border-radius: 16px;
             }
 
             #html-content-type-area .intro {
-                padding-right: 104px;
+                padding: 28px 24px 30px;
             }
 
             #html-content-type-area .intro-ticket {
-                right: 0;
+                display: none;
+            }
+
+            #html-content-type-area .section-title {
+                font-size: 33px;
+                margin-bottom: 12px;
+                text-align: left;
+                font-weight: 700;
+            }
+
+            #html-content-type-area .section-text {
+                font-size: 18px;
+                text-align: left;
+                line-height: 1.52;
+            }
+
+            #html-content-type-area .section-text .highlight {
+                display: block;
+            }
+
+            #html-content-type-area .card {
+                min-height: 208px;
+                padding: 24px 88px 24px 22px;
+                border-radius: 14px;
+            }
+
+            #html-content-type-area .card-title {
+                font-size: 22px;
+                gap: 12px;
+                font-weight: 700;
+            }
+
+            #html-content-type-area .card p {
+                font-size: 17px;
+                line-height: 1.5;
+            }
+
+            #html-content-type-area .cta-title,
+            #html-content-type-area .follow-title {
+                font-size: 29px;
+                margin-bottom: 24px;
+                text-align: left;
+                font-weight: 700;
+            }
+
+            #html-content-type-area .cta-title {
+                text-align: center;
             }
 
             #html-content-type-area .cards,
             #html-content-type-area .follow-list {
                 grid-template-columns: 1fr;
-            }
-
-            #html-content-type-area .card {
-                min-height: auto;
-                padding-right: 78px;
+                gap: 18px;
             }
 
             #html-content-type-area .cta {
-                padding-top: 18px;
-                padding-bottom: 18px;
-            }
-
-            #html-content-type-area .cta-left {
-                width: 110px;
+                padding: 28px 24px 86px;
             }
 
             #html-content-type-area .cta-line-left {
-                left: -6px;
-                top: -2px;
-                width: 170px;
+                display: none;
             }
 
             #html-content-type-area .cta-line-right {
-                right: -8px;
-                top: -4px;
-                width: 165px;
+                display: none;
+            }
+
+            #html-content-type-area .cta-line-mobile {
+                display: block;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                z-index: 0;
+            }
+
+            #html-content-type-area .cta-left {
+                left: auto;
+                right: 0;
+                bottom: 0;
             }
 
             #html-content-type-area .cta-right {
-                width: 48px;
-                right: 12px;
+                top: auto;
+                left: 0;
+                right: auto;
+                bottom: 0;
+            }
+
+            #html-content-type-area .follow {
+                padding: 36px 24px 24px;
+                background:
+                    radial-gradient(circle at left bottom, rgba(91, 14, 17, 0.42) 0%, rgba(91, 14, 17, 0.18) 22%, rgba(23, 23, 22, 0) 52%),
+                    #171716;
+                box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+            }
+
+            #html-content-type-area .btn {
+                width: 100%;
+                min-height: 70px;
+                padding: 16px 28px;
+                font-size: 23px;
+                font-weight: 700;
             }
 
             #html-content-type-area .follow-item {
-                padding-right: 72px;
+                min-height: 108px;
+                padding: 18px 98px 18px 26px;
+                border-radius: 14px;
+                font-size: 18px;
+            }
+
+            #html-content-type-area .follow-item.telegram {
+                background: #171716;
+            }
+
+            #html-content-type-area .follow-item::before {
+                margin-right: 16px;
+                font-size: 18px;
+            }
+
+            #html-content-type-area .follow-item.telegram .follow-item-img.telegram {
+                max-height: 72px;
+            }
+
+            #html-content-type-area .follow-item.video .follow-item-img.youtube {
+                max-height: 64px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #html-content-type-area .page {
+                padding: 22px 18px 30px;
+            }
+
+            #html-content-type-area .hero img,
+            #html-content-type-area .section,
+            #html-content-type-area .follow {
+                border-radius: 12px;
+            }
+
+            #html-content-type-area .section,
+            #html-content-type-area .follow {
+                margin-top: 46px;
+            }
+
+            #html-content-type-area .intro,
+            #html-content-type-area .info-grid,
+            #html-content-type-area .cta,
+            #html-content-type-area .follow {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            #html-content-type-area .info-grid {
+                padding-top: 18px;
+                padding-bottom: 18px;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            #html-content-type-area .intro {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            #html-content-type-area .section-title {
+                font-size: 28px;
+            }
+
+            #html-content-type-area .intro .section-title {
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+            #html-content-type-area .section-text {
+                font-size: 16px;
+                line-height: 1.55;
+            }
+
+            #html-content-type-area .intro .section-text {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            #html-content-type-area .card {
+                min-height: 176px;
+                padding: 22px 0px 22px 20px;
+                border-radius: 12px;
+            }
+
+            #html-content-type-area .card.card-percent {
+                min-height: 158px;
+                padding-bottom: 16px;
+            }
+
+            #html-content-type-area .card.card-gift {
+                min-height: 164px;
+                padding-right: 15px;
+                padding-bottom: 18px;
+                overflow: visible;
+            }
+
+            #html-content-type-area .card-title {
+                margin-bottom: 14px;
+                font-size: 18px;
+            }
+
+            #html-content-type-area .info-grid .card-title {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            #html-content-type-area .card p {
+                font-size: 14px;
+            }
+
+            #html-content-type-area .info-grid .card p {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            #html-content-type-area .promo-icon {
+                width: 24px;
+                height: 16px;
+            }
+
+            #html-content-type-area .info-percent {
+                width: 60px;
+                right: 6px;
+                bottom: 4px;
+            }
+
+            #html-content-type-area .info-gift {
+                width: 78px;
+                right: 0px;
+                bottom: 0px;
+            }
+
+            #html-content-type-area .cta {
+                padding-top: 28px;
+                padding-bottom: 82px;
+            }
+
+            #html-content-type-area .cta-title,
+            #html-content-type-area .follow-title {
+                font-size: 24px;
+            }
+
+            #html-content-type-area .cta-title {
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            #html-content-type-area .follow-title {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            #html-content-type-area .btn {
+                min-height: 58px;
+                padding: 14px 24px;
+                font-size: 18px;
+            }
+
+            #html-content-type-area .cta-left {
+                width: 112px;
+                left: auto;
+                right: -2px;
+                bottom: 0;
+                transform: scaleX(-1);
+            }
+
+            #html-content-type-area .cta-right {
+                width: 82px;
+                left: -2px;
+                right: auto;
+                bottom: -2px;
+                transform: none;
+            }
+
+            #html-content-type-area .cta-line-right {
+                display: none;
+            }
+
+            #html-content-type-area .cta-line-mobile {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+            }
+
+            #html-content-type-area .follow {
+                padding-top: 30px;
+                padding-bottom: 24px;
+            }
+
+            #html-content-type-area .follow-list {
+                gap: 16px;
+                margin-bottom: 22px;
+            }
+
+            #html-content-type-area .follow .btn {
+                margin-top: 6px;
+            }
+
+            #html-content-type-area .follow-item {
+                min-height: 86px;
+                padding: 16px 82px 16px 20px;
+                border-radius: 12px;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            #html-content-type-area .follow-item.telegram {
+                background: #171716;
+            }
+
+            #html-content-type-area .follow-item::before {
+                margin-right: 12px;
+                font-size: 16px;
+            }
+
+            #html-content-type-area .follow-item.telegram .follow-item-img.telegram {
+                max-height: 58px;
+            }
+
+            #html-content-type-area .follow-item.video .follow-item-img.youtube {
+                max-height: 54px;
             }
         }
     </style>
@@ -444,7 +750,7 @@
 
             <div class="hero">
                 <picture>
-                    <source media="(max-width: 768px)" srcset="./img/mobile_EN.png">
+                    <source media="(max-width: 768px)" srcset="./img/Mobile_EN.png">
                     <img src="./img/Desktop_EN.png" alt="Promo code banner">
                 </picture>
             </div>
@@ -455,7 +761,7 @@
                     <h2 class="section-title">Where to find promo codes?</h2>
                     <p class="section-text">
                         Look for promo codes on our social media, website and emails.<br>
-                        You can also check our Telegram guide for the latest active codes.<br>
+                        You can also check our Telegram guide for the latest active codes.
                         <span class="highlight">Stay alert - bonuses are limited.</span>
                     </p>
                 </div>
@@ -492,6 +798,7 @@
             <section class="section cta">
                 <img class="cta-line-left" src="./img/left_line.png" alt="">
                 <img class="cta-line-right" src="./img/right_line.png" alt="">
+                <img class="cta-line-mobile" src="./img/line_for_mobile.png" alt="">
                 <img class="cta-left" src="./img/Present red_card_present.png" alt="">
                 <img class="cta-right" src="./img/telegram_img_card_present&section_cta.png" alt="">
                 <h2 class="cta-title">Complete The Quest - Get Your Bonus</h2>
