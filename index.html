@@ -228,6 +228,17 @@
             width: 85px;
         }
 
+        #html-content-type-area .card-visual {
+            display: none;
+        }
+
+        #html-content-type-area .card-visual-phone,
+        #html-content-type-area .card-visual-ticket,
+        #html-content-type-area .card-visual-gift {
+            display: block;
+            pointer-events: none;
+        }
+
         #html-content-type-area .cta {
             padding: 16px 96px;
             text-align: center;
@@ -608,10 +619,53 @@
             }
 
             #html-content-type-area .card.card-gift {
-                min-height: 164px;
-                padding-right: 15px;
+                min-height: 332px;
+                padding-right: 18px;
                 padding-bottom: 18px;
-                overflow: visible;
+                overflow: hidden;
+            }
+
+            #html-content-type-area .card-gift .card-title,
+            #html-content-type-area .card-gift p {
+                position: relative;
+                z-index: 2;
+                max-width: 252px;
+            }
+
+            #html-content-type-area .card-visual {
+                position: relative;
+                display: block;
+                height: 178px;
+                margin-top: 14px;
+                z-index: 1;
+            }
+
+            #html-content-type-area .card-visual-phone {
+                position: absolute;
+                left: -6px;
+                bottom: 16px;
+                width: 214px;
+            }
+
+            #html-content-type-area .card-visual-ticket {
+                position: absolute;
+                right: 15px;
+                top: 250px;
+                width: 60px;
+                transform: rotate(12deg);
+                z-index: 3;
+            }
+
+            #html-content-type-area .card-visual-gift {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 94px;
+                z-index: 3;
+            }
+
+            #html-content-type-area .card-gift > .info-gift {
+                display: none;
             }
 
             #html-content-type-area .card-title {
@@ -769,6 +823,11 @@
                             Enter your promo code in the “Promo Code” section and activate it to receive your bonus
                             instantly. Follow our Telegram guide for step-by-step instructions.
                         </p>
+                        <div class="card-visual" aria-hidden="true">
+                            <img class="card-visual-phone" src="./img/mobile_gif.gif" alt="">
+                        </div>
+                        <img class="card-visual-ticket" src="./img/p_c_ticket_section_info.png" alt="">
+                        <img class="card-visual-gift" src="./img/Present Gold_section_info.png" alt="">
                         <img class="info-icon info-gift" src="./img/Present Gold_section_info.png" alt="">
                     </article>
 
